@@ -28,6 +28,7 @@ jobs:
         retention-days: 30
   merge-reports:
     needs: [playwright-test]
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
